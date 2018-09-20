@@ -1,4 +1,4 @@
-package com.example.demo.controller.postgres;
+package com.example.demo.controller.mysql;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,22 +8,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.postgres.Item;
-import com.example.demo.repo.postgres.ItemRepository;
+import com.example.demo.model.mysql.Data;
+import com.example.demo.repo.mysql.DataRepository;
 
 @RestController
 @RequestMapping("/api")
-public class ItemController {
+public class DataController {
 
 	@Autowired
-	ItemRepository repository;
+	DataRepository repository;
 
-	@GetMapping("/items")
-	public List<Item> getAllItems() {
-		List<Item> items = new ArrayList<>();
-		repository.findAll().forEach(items::add);
+	@GetMapping("/datas")
+	public List<Data> getAllItems() {
+		List<Data> datas = new ArrayList<>();
+		repository.findAll().forEach(datas::add);
 		System.out.println("count : " + repository.count());
-		return items;
+		return datas;
 	}
 
 }

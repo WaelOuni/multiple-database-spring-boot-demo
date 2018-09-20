@@ -1,5 +1,9 @@
 package com.example.demo.repo.mysql;
 
-public class DataRepository {
+import org.springframework.data.repository.CrudRepository;
 
+import com.example.demo.model.mysql.Data;
+
+public interface DataRepository extends CrudRepository<Data, Long> {
+	Data findByTitle(String title);
 }
