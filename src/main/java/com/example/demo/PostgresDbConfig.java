@@ -1,10 +1,7 @@
 package com.example.demo;
 
 import java.util.HashMap;
-import java.util.Map.Entry;
-
 import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -66,10 +63,10 @@ public class PostgresDbConfig {
 	@Primary
 	@Bean
 	public PlatformTransactionManager postgresTransactionManager() {
-		System.out.println("postgresEntityManager().getObject()");
-		for (Entry<String, Object> entry : postgresEntityManager().getObject().getProperties().entrySet()) {
-			System.out.println("Item : " + entry.getKey() + " : " + entry.getValue());
-		}
+		//System.out.println("postgresEntityManager().getObject()");
+		//for (Entry<String, Object> entry : postgresEntityManager().getObject().getProperties().entrySet()) {
+		//	System.out.println("Item : " + entry.getKey() + " : " + entry.getValue());
+		//}
 		JpaTransactionManager transactionManager = new JpaTransactionManager();
 		transactionManager.setEntityManagerFactory(postgresEntityManager().getObject());
 		return transactionManager;
