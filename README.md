@@ -3,7 +3,7 @@
 Spring JPA with multiple databases ( Postgres and mysql) 
 Spring Boot web applicaiton
 
-########################### Setup databases (just for test) ###########################
+##################################### Setup databases (just for test) #####################################
 
 #Postgres database
 
