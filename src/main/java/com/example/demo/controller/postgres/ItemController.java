@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.controller.postgres;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Item;
-import com.example.demo.repo.ItemRepository;
+import com.example.demo.model.postgres.Item;
+import com.example.demo.repo.postgres.ItemRepository;
 
 @RestController
 @RequestMapping("/api")
