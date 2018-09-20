@@ -8,6 +8,14 @@ Spring Boot web applicaiton
 
 #Postgres database
 
+#Used database : postgresdb 
+
+#Used schema : demo
+
+#Username : postgres 
+
+#Password : postgres
+
 
 
 CREATE TABLE item(id SERIAL PRIMARY KEY NOT NULL,name TEXT    NOT NULL);
@@ -21,6 +29,14 @@ INSERT INTO public.items(name) VALUES ('Postgresql');
 
 
 #Mysql database
+
+#Used database : mysqldb 
+
+#Username : root 
+
+#Password : root
+
+
 
 CREATE DATABASE mysqldb;
 
